@@ -1,0 +1,614 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Nunito:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap');
+
+:root{
+    --glavna-crna: #0f1014;
+    --glavna-zlatna: #ffe9a0;
+}
+/* reset */
+*{
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+*:focus{
+    outline: none;
+}
+body{
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    color: var(--glavna-crna);
+    overflow-x: hidden;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+img, i{
+    user-select: none;
+}
+h1, h2, h3, h4, h5{
+    text-align: center;
+}
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+a, button, input, select{
+    font-family: inherit;
+    color: inherit;
+    text-decoration: none;
+}
+section{
+    padding: 2rem 0;
+}
+
+.u-izradi{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+/* globalne klase */
+.omotac{
+    max-width: 960px;
+    margin: 0 auto;
+}
+.dark{
+    background-color: var(--glavna-crna);
+    color: var(--glavna-zlatna);
+}
+.btn{
+    display: inline-block;
+    background-color: var(--glavna-crna);
+    color: var(--glavna-zlatna);
+    padding: 0.5rem 2rem;
+    border-radius: 100vw;
+}
+.btn:hover{
+    background-color: var(--glavna-zlatna);
+    color: var(--glavna-crna);
+    border: 2px solid var(--glavna-crna);
+}
+.btn-gold{
+    display: inline-block;
+    background-color: var(--glavna-zlatna);
+    color: var(--glavna-crna);
+    padding: 0.5rem 2rem;
+    border-radius: 100vw;
+}
+.btn-gold:hover{
+    background-color: var(--glavna-crna);
+    color: var(--glavna-zlatna);
+    border: 2px solid var(--glavna-zlatna);
+}
+.cursive{
+    font-family: 'Dancing Script' , cursive;
+    font-size: 2rem;
+    text-align: center;
+}
+/* hero */
+main{
+    min-height: 100vh;
+    background: url(./img/hero.jpg) no-repeat center center / cover;
+    background-attachment: fixed;
+}
+.glavna-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 100;
+}
+.glavna-nav a img{
+    width: 5rem;
+}
+.glavna-nav ul{
+    display: flex;
+    transition: height 0.6s linear;
+}
+.glavna-nav ul li{
+    text-transform: uppercase;
+    transition: transform 0.6s linear, opacity 0.6s linear;
+}
+.glavna-nav ul li a{
+    padding: 1rem 2rem;
+}
+.glavna-nav ul li a:hover{
+    background-color: var(--glavna-zlatna);
+    color: var(--glavna-crna);
+}
+#meni-dugme{
+    display: none;
+    background-color: inherit;
+    border: 0;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.hero{
+    width: 40%;
+    margin-left: auto;
+    padding: 25% 0 2rem;
+    text-align: center;
+}
+.hero h1{
+    text-transform: uppercase;
+}
+/* preporucujemo */
+.preporuka h2{
+    padding: 2rem;
+}
+.preporuceno{
+    display: grid;
+    grid-template-columns:  repeat( 4, 1fr);
+    gap: 1rem;
+}
+.preporuceno > div{
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+.preporuceno img{
+    height: 100%;
+    object-fit: cover;
+}
+.preporuceno h4{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0;
+    background-color: rgba(15, 16, 20, 0.8);
+    color: var(--glavna-zlatna);
+}
+.u-trendu::before{
+    content: 'u trendu';
+    position: absolute;
+    top: 1rem;
+    padding: 0.15rem 1rem;
+    background-color: rgba(255, 233, 160, 0.8);
+    border-radius: 0 0.5rem 0.5rem 0;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+.preporuka .btn, .galerija .btn-gold, .kontakt .btn{
+    display: block;
+    text-align: center;
+    width: 30%;
+    margin: 2rem auto;
+    border: 2px solid #fff;
+}
+.preporuka .btn:hover, .kontakt .btn:hover{
+    border: 2px solid var(--glavna-crna);
+}
+/* delatnosti */
+.delatnosti{
+    padding-bottom: 0;
+}
+.slider-container{
+    position: relative;
+    height: 90vh;
+    overflow: hidden;
+}
+.left-slides-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35%;
+    height: 100%;
+    transition: transform 0.6s ease-in-out;
+}
+.left-slides-container > div{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+.left-slides-container > div:first-child{
+    background-color: #b0ad31;
+}
+.left-slides-container > div:nth-child(2){
+    background-color: #331d12;
+}
+.left-slides-container > div:nth-child(3){
+    background-color: #182217;
+}
+.left-slides-container > div:nth-child(4){
+    background-color: #c2a3c3;
+}
+.right-slides-container{
+    position: absolute;
+    top: 0;
+    left: 35%;
+    width: 65%;
+    height: 100%;
+    transition: transform 0.6s ease-in-out;
+}
+.right-slides-container > div{
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: cover;
+    height: 100%;
+}
+.right-slides-container > div:first-child{
+    background-image: url(./img/cvece.jpg);
+}
+.right-slides-container > div:nth-child(2){
+    background-image: url(./img/cetinari.jpg);
+}
+.right-slides-container > div:nth-child(3){
+    background-image: url(./img/rasad.jpg);
+
+}
+.right-slides-container > div:nth-child(4){
+    background-image: url(./img/park.jpg);
+
+}
+.btns-container{
+    position: absolute;
+    top: 60%;
+    left: 35%;
+    z-index: 2;
+}
+.btn-up, .btn-down{
+    display: block;
+    border: 0;
+    font-size: 1.25rem;
+    padding: 1rem;
+    cursor: pointer;
+    background-color: rgba(15, 16, 20, 0.8);
+    color: var(--glavna-zlatna);
+}
+.btn-up:hover, .btn-down:hover{
+    background-color: var(--glavna-crna);
+}
+.btn-down{
+    transform: translateX(-100%);
+    border-radius: 5px 0 0 5px;
+}
+.btn-up{
+    border-radius: 0 5px 5px 0;
+}
+/* zasto mi */
+.zasto{
+    padding-top: 0;
+}
+.zasto-nas-rasadnik{
+    background: url(./img/greenhouse.jpg) no-repeat center top / cover;
+    padding: 2rem 0;
+}
+.zasto-nas-rasadnik > *{
+    width: 50%;
+    margin: auto;
+}
+.zasto-nas-rasadnik h2{
+    padding: 2rem;
+}
+.zasto-icons{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding: 2rem;
+}
+.zasto-icons > *{
+    padding: 2rem;
+    text-align: center;
+}
+.zasto-icons div > i{
+    font-size: 2rem;
+    border: 3px solid;
+    border-radius: 50%;
+    padding: 2rem;
+}
+/* nasi radovi */
+.galerija{
+    padding-bottom: 5rem;
+    overflow: hidden;
+}
+.kontejner-radova{
+    position: relative;
+    padding: 0 0 3rem;
+    min-height: 80vh;
+}
+.kontejner-radova img{
+    position: absolute;
+}
+.comp{
+    left: 50%;
+    transform: translateX(-50%);
+}
+.laptop{
+    max-width: 400px;
+    bottom: 5%;
+    left: 0;
+}
+.tablet{
+    max-width: 250px;
+    bottom: 15%;
+    right: 10%;
+}
+.mobilni{
+    max-width: 150px;
+    bottom: 0;
+    right: 5%;
+}
+.galerija .btn-gold{
+    border: 2px solid var(--glavna-zlatna);
+}
+/* testimonials */
+.linija{
+    width: 100%;
+    height: 1px;
+    padding: 0 2rem;
+    margin: auto;
+    background-color: var(--glavna-zlatna);
+    animation: fill 8s linear  infinite;
+    transform-origin: left;
+}
+@keyframes fill {
+    0%{
+        transform: scaleX(0);
+    }
+}
+.testimoials-text{
+    position: relative;
+    padding: 1rem 3rem 3rem;
+    text-align: justify;
+    font-size: 1.1rem;
+}
+.testimoials-text .fa-quote-right, .testimoials-text .fa-quote-left{
+    position: absolute;
+    top: 2rem;
+    opacity: 0.3;
+    font-size: 2rem;
+}
+.testimoials-text .fa-quote-right{
+    left: 0;
+}
+.testimoials-text .fa-quote-left{
+    right: 0;
+}
+.testimonials-name{
+    padding: 1rem 1rem 5rem;
+    font-style: italic;
+    text-align: center;
+}
+/* mapa */
+.mapa h2{
+    padding: 3rem;
+}
+.lokacije{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    gap: 2rem;
+}
+.lokacije > *{
+    flex: 1;
+}
+.radno-vreme{
+    font-size: 1.2rem;
+}
+.otvoreno, .zatvoreno{
+    display: none;
+}
+.green, .red{
+    font-weight: bold;
+    color: green;
+}
+.red{
+    color: red;
+}
+.lokacije iframe{
+    border-radius: 1rem;
+    box-shadow: 0 0 0 3px var(--glavna-zlatna), 0 0 5px 2px var(--glavna-crna);
+    max-width: 600px;
+}
+/* kontakt i footer */
+.kontakt, footer{
+    text-align: center;
+}
+.kontakt p{
+    line-height: 2rem;
+}
+.kontakt a[target="_blank"]{
+    text-decoration: underline;
+    font-size: 1.2rem;
+}
+.kontakt a[target="_blank"]:hover{
+    text-decoration: none;
+}
+footer{
+    padding: 1rem 0 0;
+}
+footer .omotac{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 2rem;
+    background-color: #fff;
+}
+footer .omotac > *{
+    flex: 1;
+}
+footer p{
+    padding: 0 0.5rem;
+}
+footer i{
+    font-size: 4rem;
+}
+footer img{
+    max-width: 200px;
+}
+.bottom{
+    padding-bottom: 8rem;
+    background: url(./img/grass.jpg) no-repeat left top / cover;
+}
+/* responsive */
+@media ( min-width: 1920px ){
+    body{
+        max-width: 1920px;
+        margin: 0 auto;
+    }
+    .kontejner-radova{
+        min-height: auto;
+        height: 700px;
+    }
+}
+@media ( max-width: 960px ){
+    .glavna-nav{
+        justify-content: space-between;
+    }
+    .glavna-nav, .preporuka, .mapa{
+        padding: 0 1rem;
+    }
+    .hero{
+        padding-right: 1rem;
+    }
+    .kontejner-radova{
+        text-align: center;
+    }
+    .kontejner-radova img{
+        position: relative;
+    }
+    .comp, .laptop, .tablet, .mobilni{
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        margin: -0.5rem;
+    }
+    .comp{
+        transform: translateX(0);
+    }
+}
+@media ( max-width: 780px ){
+    .glavna-nav a img{
+        width: 3rem;
+    }
+    .glavna-nav ul li{
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+    .hero{
+        width: 50%;
+    }
+    .preporuceno{
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        gap: 2rem;
+    }
+    .preporuceno > div{
+        width: 75%;
+    }
+    .zasto-nas-rasadnik{
+        background-position: left center;
+    }
+    .zasto-nas-rasadnik > *{
+        width: 60%;
+        margin: 0 0 0 auto;
+        padding: 0 1rem;
+    }
+    .zasto-icons{
+        gap: 0;
+        padding: 1rem;
+    }
+    .zasto-icons div > i{
+        padding: 1rem;
+    }
+    .lokacije > *{
+        flex: auto;
+    }
+    .lokacije iframe{
+       margin: 1rem 2rem;
+    }
+}
+@media ( max-width: 520px ){
+    html{
+        font-size: 15px;
+    }
+    main{
+        background: url(./img/hero.jpg) no-repeat 55% center / cover;
+        background-attachment: fixed;
+    }
+    .glavna-nav{
+        align-items: flex-start;
+    }
+    #meni-dugme{
+        display: block;
+        transition: transform 0.3s linear;
+    }
+    #meni-dugme.active{
+        transform: rotateX(-180deg);
+    }
+    .glavna-nav ul{
+        height: 0;
+        flex-direction: column;
+        text-align: center;
+        overflow: hidden;
+        padding-top: 2rem;
+    }
+    .glavna-nav ul.active{
+        height: 50vh;
+    }
+    .glavna-nav ul li{
+        transform: rotateY(180deg);
+        opacity: 0;
+    }
+    .glavna-nav ul.active li{
+        transform: rotateY(360deg);
+        opacity: 1;
+    }
+    .hero{
+        width: 70%;
+        padding: 35% 0.5rem 2rem;
+    }
+    .btn, .btn-gold{
+        width: 100%;
+    }
+    .preporuceno{
+        grid-template-columns: 1fr;
+    }
+    .preporuceno > div{
+        width: 50%;
+    }
+    .preporuka .btn{
+        width: 50%;
+    }
+    .zasto-nas-rasadnik{
+        background-position: 12.5% top;
+    }
+    .zasto-nas-rasadnik > *{
+        width: 60%;
+    }
+    .zasto-icons{
+        grid-template-columns: 1fr;
+    }
+    .galerija .btn-gold, .kontakt .btn{
+        width: 80%;
+    }
+    .lokacije{
+        overflow: hidden;
+    }
+    .lokacije iframe{
+        max-width: 400px;
+        margin: 1rem auto;
+     }
+    footer i{
+        font-size: 3rem;
+    }
+    footer img{
+        max-width: 150px;
+    }
+}
