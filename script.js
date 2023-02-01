@@ -1,3 +1,6 @@
+// AOS init
+AOS.init();
+
 // meni dugme
 const meniDugme = document.querySelector('#meni-dugme');
 const linkovi = document.querySelector('.glavna-nav ul');

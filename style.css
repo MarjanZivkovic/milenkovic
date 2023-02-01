@@ -586,10 +586,10 @@ footer img{
         grid-template-columns: 1fr;
     }
     .preporuceno > div{
-        width: 50%;
+        width: 80%;
     }
     .preporuka .btn{
-        width: 50%;
+        width: 80%;
     }
     .zasto-nas-rasadnik{
         background-position: 12.5% top;

@@ -8,6 +8,7 @@
     <meta name="theme-color" content="#0f1014">
     <link rel="icon" type="image/svg" href="./img/logo-dark.svg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <title>Royal Garden Milenković</title>
 </head>
@@ -24,7 +25,7 @@
                 <button id="meni-dugme"><i class="fa-solid fa-circle-chevron-down"></i></button>
         </nav>
         <div class="omotac">
-            <div class="hero">
+            <div class="hero" data-aos="fade-up" data-aos-duration="3000">
                 <h1>Royal Garden Milenković</h1>
                 <p class="cursive">Dobro došli u naše carstvo!</p>
                 <p>Mi smo rasadnik sa tradicijom i iskustvom. Jenda od najvećih industrija cveća i četinara na jugu Srbije.</p>
@@ -36,19 +37,19 @@
     <section class="preporuka omotac">
         <h2 class="cursive">Preporučujemo za vaš vrt</h2>
         <div class="preporuceno">
-            <div class="u-trendu">
+            <div class="u-trendu" data-aos="flip-left" data-aos-duration="3000">
                 <img src="./img/kaliopa.jpg" alt="kaliopa">
                 <h4>Kaliopa</h4>
             </div>
-            <div class="u-trendu">
+            <div class="u-trendu" data-aos="flip-left" data-aos-duration="3000">
                 <img src="./img/kala.jpg" alt="kala">
                 <h4>Bela Kala</h4>
             </div>
-            <div>
+            <div data-aos="flip-left" data-aos-duration="3000">
                 <img src="./img/petunija.jpg" alt="petunija">
                 <h4>Petunija</h4>
             </div>
-            <div>
+            <div data-aos="flip-left" data-aos-duration="3000">
                 <img src="./img/tuja.jpg" alt="tuja">
                 <h4>Tuja</h4>
             </div>
@@ -90,21 +91,21 @@
         <div class="omotac">
             <div class="zasto-nas-rasadnik">
                 <h2 class="cursive">Zašto naš rasadnik?</h2>
-                <p>Zato što se sve faze života naših biljaka od proizvodnje rasada preko uzgoja i oblikovanja do konačne isporuke našim kupcima odvijaju na našem porodičnom imanju. To nam garantuje apsolutnu kontrolu nad svim faktorima koji su presudni za uzgoj biljaka vrhunskog kvaliteta koje želite u svom domu, dvorištu ili poslovnom prostoru.</p>
+                <p data-aos="fade-up" data-aos-duration="3000">Zato što se sve faze života naših biljaka od proizvodnje rasada preko uzgoja i oblikovanja do konačne isporuke našim kupcima odvijaju na našem porodičnom imanju. To nam garantuje apsolutnu kontrolu nad svim faktorima koji su presudni za uzgoj biljaka vrhunskog kvaliteta koje želite u svom domu, dvorištu ili poslovnom prostoru.</p>
                 <div class="zasto-icons">
-                    <div>
+                    <div data-aos="flip-left" data-aos-duration="3000">
                         <i class="fa-solid fa-flask"></i>
                         <p><i class="fa-solid fa-check"></i> Zdrave i kvalitetne biljke</p>
                     </div>
-                    <div>
+                    <div data-aos="flip-left" data-aos-duration="3000">
                         <i class="fa-solid fa-comments"></i>
                         <p><i class="fa-solid fa-check"></i> Podrška i stručni saveti</p>
                     </div>
-                    <div>
+                    <div data-aos="flip-left" data-aos-duration="3000">
                         <i class="fa-solid fa-sack-dollar"></i>
                         <p><i class="fa-solid fa-check"></i> Pristupačne cene</p>
                     </div>
-                    <div>
+                    <div data-aos="flip-left" data-aos-duration="3000">
                         <i class="fa-solid fa-truck-fast"></i>
                         <p><i class="fa-solid fa-check"></i> Brza i efikasna isporuka</p>
                     </div>
@@ -116,7 +117,7 @@
     <section class="galerija dark">
         <div class="omotac">
             <h2 class="cursive">Neki od naših radova</h2>
-            <div class="kontejner-radova">
+            <div class="kontejner-radova" data-aos="zoom-in" data-aos-duration="3000">
                 <img class="comp" src="./img/comp.png" alt="compjuter">
                 <img class="laptop" src="./img/lap.png" alt="laptop">
                 <img class="tablet" src="./img/tablet.png" alt="tablet">
@@ -142,7 +143,7 @@
     <section class="mapa">
         <div class="omotac">
             <h2 class="cursive">Gde nas možete naći</h2>
-            <div class="lokacije">
+            <div class="lokacije" data-aos="fade-up" data-aos-duration="3000">
                 <div>
                     <h3>Pronađite naš rasadnik u Turekovcu</h3>
                     <p>Posetite nas. Ljubazno i stručno osoblje Vas čeka, da zajedno pronađemo rešenje za vaš vrt, uređenje dvorišta, projektovanje dvorišta, uređenje radnog prostora.
@@ -161,7 +162,7 @@
     <section class="kontakt">
         <div class="omotac">
             <h2 class="cursive">Kontaktirajte nas</h2>
-            <div>
+            <div data-aos="fade-up" data-aos-duration="3000">
                 <h3>Pozovite nas</h3>
                 <p>
                     <i class="fa-solid fa-phone fa-lg"></i> 016796362 <br>
@@ -190,6 +191,7 @@
         </div>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./script.js"></script>
 </body>
 </html>
