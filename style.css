@@ -22,7 +22,7 @@ img{
     max-width: 100%;
     height: auto;
 }
-img, i{
+img, i, button{
     user-select: none;
 }
 h1, h2, h3, h4, h5{
@@ -155,6 +155,7 @@ main{
 }
 .preporuceno img{
     height: 100%;
+    width: 100;
     object-fit: cover;
 }
 .preporuceno h4{
@@ -194,7 +195,7 @@ main{
 }
 .slider-container{
     position: relative;
-    height: 90vh;
+    height: 95vh;
     overflow: hidden;
 }
 .left-slides-container{
@@ -291,6 +292,9 @@ main{
 .zasto-nas-rasadnik > *{
     width: 50%;
     margin: auto;
+}
+.zasto-nas-rasadnik > p{
+    text-align: justify;
 }
 .zasto-nas-rasadnik h2{
     padding: 2rem;
@@ -414,6 +418,7 @@ main{
     border-radius: 1rem;
     box-shadow: 0 0 0 3px var(--glavna-zlatna), 0 0 5px 2px var(--glavna-crna);
     max-width: 600px;
+    margin: auto;
 }
 /* kontakt i footer */
 .kontakt, footer{
@@ -476,6 +481,14 @@ footer img{
     .hero{
         padding-right: 1rem;
     }
+    .preporuceno{
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        gap: 2rem;
+    }
+    .preporuceno > div{
+        width: 75%;
+    }
     .kontejner-radova{
         text-align: center;
     }
@@ -504,19 +517,11 @@ footer img{
     .hero{
         width: 50%;
     }
-    .preporuceno{
-        grid-template-columns: 1fr 1fr;
-        justify-items: center;
-        gap: 2rem;
-    }
-    .preporuceno > div{
-        width: 75%;
-    }
     .zasto-nas-rasadnik{
         background-position: left center;
     }
     .zasto-nas-rasadnik > *{
-        width: 60%;
+        width: 80%;
         margin: 0 0 0 auto;
         padding: 0 1rem;
     }
@@ -531,7 +536,7 @@ footer img{
         flex: auto;
     }
     .lokacije iframe{
-       margin: 1rem 2rem;
+       margin: 1rem auto;
     }
 }
 @media ( max-width: 520px ){
@@ -589,11 +594,11 @@ footer img{
     .zasto-nas-rasadnik{
         background-position: 12.5% top;
     }
-    .zasto-nas-rasadnik > *{
-        width: 60%;
+    .zasto-icons > *{
+        padding: 1rem;
     }
-    .zasto-icons{
-        grid-template-columns: 1fr;
+    .zasto-icons div > i{
+        font-size: 1.5rem;
     }
     .galerija .btn-gold, .kontakt .btn{
         width: 80%;
@@ -602,8 +607,7 @@ footer img{
         overflow: hidden;
     }
     .lokacije iframe{
-        max-width: 400px;
-        margin: 1rem auto;
+        max-width: 350px;
      }
     footer i{
         font-size: 3rem;
