@@ -106,7 +106,8 @@ main{
     z-index: 100;
 }
 .glavna-nav a img{
-    width: 5rem;
+    max-width: 80px;
+    border-radius: 50%;
 }
 .glavna-nav ul{
     display: flex;
@@ -611,8 +612,5 @@ footer img{
      }
     footer i{
         font-size: 3rem;
-    }
-    footer img{
-        max-width: 150px;
     }
 }
