@@ -98,7 +98,7 @@ const godina = danasnjiDatum.getFullYear();
 
 tekucaGodina.textContent = godina;
 
-if(danasnjiDatum.getHours() > 7 && danasnjiDatum.getHours() < 17){
+if(danasnjiDatum.getHours() > 7 && danasnjiDatum.getHours() < 18){
     otvoreno.style.display = 'block';
     zatvoreno.style.display = 'none';
 } else {
