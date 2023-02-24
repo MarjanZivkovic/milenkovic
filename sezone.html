@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0f1014">
+    <link rel="icon" type="image/jpg" href="./img/logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Naši Proizvodi</title>
+</head>
+<body>
+    <nav class="glavna-nav dark">
+        <div><a href="./index.html" title="Početna"><img src="./img/logo-dark.jpg" alt="logo"></a></div>
+        <ul>
+            <li><a href="./uizradi.html">O nama</a></li>
+            <li><a class="tekuca-strana" href="./proizvodi.html">Naši proizvodi</a></li>
+            <li><a href="./uizradi.html">Naše usluge</a></li>
+        </ul>
+        <button id="meni-dugme"><i class="fa-solid fa-circle-chevron-down"></i></button>
+    </nav>
+    <section class="landing-proizvodi">
+        <div class="omotac">
+            <h1>Naši Proizvodi</h1>
+            <p class="cursive">Donosimo radost i boje u Vaš svet!</p>
+        </div>
+    </section>
+    <section class="sve-sezone dark">
+        <video src="./img/cvece.mp4" autoplay muted loop></video>
+        <div>
+            <h2 class="cursive">Biljke za sve sezone</h2>
+            <div class="mreza-sezona omotac">
+                <a href="./sezone/prolece/index.html" class="sezona sezona-prolece">Proleće</a>
+                <a href="" class="sezona sezona-jesen">Jesen</a>
+                <a href="" class="sezona sezona-cetinari">Četinari</a>
+                <a href="" class="sezona sezona-osmi-mart">8. Mart</a>
+                <a href="" class="sezona sezona-bozic">Božić</a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="omotac">
+            <div>
+                <img src="./img/logo.jpg" alt="logo">
+            </div>
+            <p>
+                Politika privatnosti <br>
+                &copy; <span class="godina"></span> Copyright PR Royal Garden Milenković - Sva prava zadržana <br>
+            </p> 
+        </div>
+        <div class="bottom">
+            <small>Design by: Marjan</small>
+        </div>
+    </footer>
+
+    <script>
+        // meni dugme
+        const meniDugme = document.querySelector('#meni-dugme');
+        const linkovi = document.querySelector('.glavna-nav ul');
+
+        meniDugme.addEventListener('click', () => { 
+            linkovi.classList.toggle('active');
+            meniDugme.classList.toggle('active');
+        });
+
+        // godina
+        const tekucaGodina = document.querySelector('.godina');
+
+        const danasnjiDatum = new Date();
+        const godina = danasnjiDatum.getFullYear();
+        tekucaGodina.textContent = godina;
+    </script>
+</body>
+</html>

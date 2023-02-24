@@ -464,7 +464,8 @@ footer img{
     background: url(./img/grass.jpg) no-repeat left top / cover;
 }
 
-/* PROIZVODI  */
+/* PROIZVODI*/
+/* strana sve sezone */
 .landing-proizvodi{
     background: url(./img/products.jpg) no-repeat center 3rem / cover;
     background-attachment: fixed;
@@ -480,39 +481,135 @@ footer img{
     background-color: var(--glavna-crna);
     color: var(--glavna-zlatna);
     padding: 0.25rem 1rem;
+    margin-right: 2rem;
     border-radius: 5px;
 }
 .landing-proizvodi h1{
     text-transform: uppercase;
     font-size: 2.5rem;
 }
+.sve-sezone{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 0;
+    overflow: hidden;
+}
+.sve-sezone video{
+    height: 90vh;
+}
+.sve-sezone h2{
+    margin: 4rem 0;
+}
+.mreza-sezona{
+    padding: 2rem;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(6, 1fr);
+}
+.mreza-sezona > *{
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    text-shadow: 0 0 1rem var(--glavna-crna);
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: 2px solid var(--glavna-zlatna);
+}
+.mreza-sezona > *:hover{
+    box-shadow: 0 0 1rem var(--glavna-zlatna);
+    background: var(--glavna-crna);
+}
+.sezona-prolece{
+    grid-column: 1 / 4;
+    background: url(./sezone/img/prolece-hero.jpg) center center / cover;
+}
+.sezona-jesen{
+    grid-column: 4 / 7;
+}
+.sezona-cetinari{
+    grid-column: 1 / 3;
+}
+.sezona-osmi-mart{
+    grid-column: 3 / 5;
+}
+.sezona-bozic{
+    grid-column: 5 / 7;
+}
+/* strane sa proizvodima */
+.strana-sa-proizvodima .omotac{
+    max-width: 1200px;
+}
+.landing-prolece{
+    background: url(./sezone/img/prolece-hero.jpg) no-repeat center center / cover;
+}
 .kontejner-proizvoda{
-    background: url(./img/Texture10.png);
+    background: url(./sezone/img/Texture10.png);
     background-attachment: fixed;
 }
+.kontejner-proizvoda .omotac > h2{
+    background-color: #fff;
+    margin: 2rem 0;
+    padding: 1rem;
+}
 .svi-proizvodi{
-    padding: 4rem 0;
+    padding: 4rem 0.5rem;
     display: flex;
     justify-content: space-between;
     align-items: start;
-    gap: 2rem;
+    gap: 3rem 2rem;
 }
 .proizvod{
-    max-width: 400px;
+    max-width: 350px;
     background-color: #fff;
     border-radius: 0.5rem;
     overflow: hidden;
 }
 .kontejner-slika{
+    position: relative;
     height: 480px;
     overflow: hidden;
+    transition: all 0.4s linear;
 }
-.proizvod img:hover{
-    max-width: 500px;
-    cursor: crosshair;
+.dan-i-noc{
+    background-image: url(./sezone/img/daninoc1.jpg);
+}
+.kadifa{
+    background-image: url(./sezone/img/kadifa1.jpg);
+}
+.verbena{
+    background-image: url(./sezone/img/verbena1.jpg);
+}
+.kaliopa{
+    background-image: url(./sezone/img/kaliopa1.jpg);
+}
+.hrizantema{
+    background-image: url(./sezone/img/hrizantema1.jpg);
+}
+.kruzici{
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 1rem;
+    display: flex;
+    gap: 1.5rem;
+}
+.krug{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border: 1px solid var(--glavna-crna);
+    background-color: rgba(255, 233, 160, 0.7);
+    cursor: pointer;
+}
+.krug:hover{
+    filter: brightness(0.4);
 }
 .proizvod h3{
-    margin-bottom: 0;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
@@ -530,6 +627,9 @@ footer img{
 }
 .plus:hover{
     filter: brightness(0.8);
+}
+.plus:active{
+    transform: translateY(2px);
 }
 .opis-proizvoda{
     padding: 1rem 1.5rem;
@@ -612,6 +712,11 @@ footer img{
     .comp{
         transform: translateX(0);
     }
+    /* PROIZVODI */
+    .svi-proizvodi{
+        padding: 4rem 2rem;
+        justify-content: center;
+    }
 }
 @media ( max-width: 780px ){
     .glavna-nav a img{
@@ -649,6 +754,13 @@ footer img{
        margin: 1rem auto;
     }
     /* PROIZVODI */
+    .sve-sezone{
+        grid-template-columns: 1fr;
+    }
+    .sve-sezone video{
+        margin: auto;
+        max-width: 100%;
+    }
     .svi-proizvodi{
         flex-direction: column;
         align-items: center;
@@ -669,7 +781,7 @@ footer img{
     #meni-dugme{
         display: block;
         transition: transform 0.3s linear;
-        margin-top: 1rem;
+        margin-top: 0.5rem;
     }
     #meni-dugme.active{
         transform: rotateX(-180deg);
@@ -734,5 +846,17 @@ footer img{
     }
     .kontakt-info p{
         margin: 0;
+    }
+    /* PROIZVODI */
+    .landing-proizvodi .omotac > *{
+        margin: 2rem auto;
+    }
+    .mreza-sezona{
+        gap: 1rem;
+        padding: 2rem 1rem 4rem;
+    }
+    .mreza-sezona > *{
+        font-size: 1rem;
+        letter-spacing: normal;
     }
 }
