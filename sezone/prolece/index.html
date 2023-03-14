@@ -30,9 +30,13 @@
     <section class="kontejner-proizvoda">
         <div class="omotac">
             <h2 class="cursive">Doživite lepotu ponovnog rađanja uz naše prolećno cveće!</h2>
+            <div class="pretraga-cveca">
+                <i id="lupa" class="fa-solid fa-magnifying-glass" title="Pretražite proizvode"></i>
+                <input class="input-pretraga" type="text" placeholder="Pretražite prolećno cveće...">
+            </div>
             <div class="svi-proizvodi">
                 <!-- dan i noc -->
-                <div class="proizvod" data-aos="flip-left">
+                <div id="viola-dan-i-noć" class="proizvod">
                     <div class="kontejner-slika dan-i-noc">
                         <div class="kruzici">
                             <div class="krug" data-broj-slike="1"></div>
@@ -40,13 +44,13 @@
                             <div class="krug" data-broj-slike="3"></div>
                         </div>
                     </div>
-                    <h3>Dan i noć</h3>
+                    <h3>Viola</h3>
                     <div class="prikazi-opis">Detaljnije <button class="plus"><i class="fa-solid fa-plus"></i></button></div>
                     <div class="opis-proizvoda">
-                        <p>Dan i noć (Viola). Svojim veselim bojama osvežavaju vrt u tmurnim periodima godine. Konstatnim cvetanjem u poznoj jeseni i posle zime dočekuje proleće masom cvetova. Lako prezimuljuje, snežni pokrivač im godi.</p>
+                        <p>Viola ( Dan i noć ). Svojim veselim bojama osvežavaju vrt u tmurnim periodima godine. Konstatnim cvetanjem u poznoj jeseni i posle zime dočekuje proleće masom cvetova. Lako prezimuljuje, snežni pokrivač im godi.</p>
                         <ul class="karakteristike">
                             <li> <strong> Kategorija:</strong> cveće</li>
-                            <li> <strong> Životni vek biljke:</strong> dvogodišnja</li>
+                            <li> <strong> Životni vek biljke:</strong> višegodišnja</li>
                             <li> <strong> Izdržljivost:</strong> prezimljava na otovrenom</li>
                             <li> <strong> Mesto sadnje:</strong> saksija,bašta</li>
                         </ul>
@@ -85,7 +89,7 @@
                 </div>
 
                 <!-- kadifa -->
-                <div class="proizvod" data-aos="flip-left">
+                <div id="kadifa" class="proizvod">
                     <div class="kontejner-slika kadifa">
                         <div class="kruzici">
                             <div class="krug" data-broj-slike="1"></div>
@@ -134,7 +138,7 @@
                 </div>
 
                 <!-- verbena -->
-                <div class="proizvod" data-aos="flip-left">
+                <div id="verbena" class="proizvod">
                     <div class="kontejner-slika verbena">
                         <div class="kruzici">
                             <div class="krug" data-broj-slike="1"></div>
@@ -188,7 +192,7 @@
                 </div>
 
                 <!-- kaliopa -->
-                <div class="proizvod" data-aos="flip-left">
+                <div id="kaliopa" class="proizvod">
                     <div class="kontejner-slika kaliopa">
                         <div class="kruzici">
                             <div class="krug" data-broj-slike="1"></div>
@@ -241,7 +245,7 @@
                 </div>
 
                 <!-- hrizantema -->
-                <div class="proizvod" data-aos="flip-left">
+                <div id="hrizantema" class="proizvod">
                     <div class="kontejner-slika hrizantema">
                         <div class="kruzici">
                             <div class="krug" data-broj-slike="1"></div>
@@ -293,8 +297,334 @@
                     </div> 
                 </div>
 
+                <!-- petunija -->
+                <div id="petunija" class="proizvod">
+                    <div class="kontejner-slika petunija">
+                        <div class="kruzici">
+                            <div class="krug" data-broj-slike="1"></div>
+                            <div class="krug" data-broj-slike="2"></div>
+                            <div class="krug" data-broj-slike="3"></div>
+                        </div>
+                    </div>
+                    <h3>Petunija</h3>
+                    <div class="prikazi-opis">Detaljnije <button class="plus"><i class="fa-solid fa-plus"></i></button></div>
+                    <div class="opis-proizvoda">
+                        <p>Petunija je biljka brzog rasta, bogato cveta do kasne jeseni, da bi biljka bila u svom punom sjaju obezbedite joj veliku posudu za gajenje, zemlju obogaćenu hranljivim materijama. Voli redovno zalivanje i prihranjivanje do dva puto nedeljno.</p>
+                        <ul class="karakteristike">
+                            <li> <strong> Kategorija:</strong> cveće</li>
+                            <li> <strong> Životni vek biljke:</strong> jednogodišnja</li>
+                            <li> <strong> Izdržljivost:</strong> do prvih mrazeva</li>
+                            <li> <strong> Mesto sadnje:</strong> saksija, žardinjera</li>
+                        </ul>
+                        <div class="karakteristike-ikone">
+                            <div>
+                                <img src="../img/visina.svg" alt="visina biljke">
+                                <div>do 100 cm</div>
+                            </div>
+                            <div>
+                                <img src="../img/sirina.svg" alt="rastojanje između biljaka">
+                                <div>30-40 cm</div>
+                            </div>
+                            <div>
+                                <img src="../img/sunce.svg" alt="sunce">
+                                <div>sunce</div>
+                            </div>
+                            <div>
+                                <img src="../img/senka.svg" alt="polusenka">
+                                <div>polusenka</div>
+                            </div>
+                        </div>
+                        <div class="kalendar">
+                            Vreme sadnje:
+                            <table>
+                                <tr>
+                                    <td>JAN</td> <td>FEB</td> <td>MAR</td>
+                                    <td class="sadnja">APR</td> <td class="sadnja">MAJ</td> <td class="sadnja">JUN</td>
+                                </tr>
+                                <tr>
+                                    <td class="sadnja">JUL</td> <td>AVG</td> <td>SEP</td>
+                                    <td>OKT</td> <td>NOV</td> <td>DEC</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div> 
+                </div>
+
+                <!-- zonalka -->
+                <div id="zonalna-muskatla" class="proizvod">
+                    <div class="kontejner-slika zonalka">
+                        <div class="kruzici">
+                            <div class="krug" data-broj-slike="1"></div>
+                            <div class="krug" data-broj-slike="2"></div>
+                            <!-- <div class="krug" data-broj-slike="3"></div> -->
+                        </div>
+                    </div>
+                    <h3>Zonalna muškatla</h3>
+                    <div class="prikazi-opis">Detaljnije <button class="plus"><i class="fa-solid fa-plus"></i></button></div>
+                    <div class="opis-proizvoda">
+                        <p>Muškatle se uzgajaju se zbog raznobojnih cvetova, mogu se saditi u saksijama i lejama. U toplim predelima cvetaju gotovo neprestano. Zonalne muškatle (zonalke) su osetljive na mraz, posebno kada temperatura padne ispod 5 stepeni.</p>
+                        <ul class="karakteristike">
+                            <li> <strong> Kategorija:</strong> cveće</li>
+                            <li> <strong> Životni vek biljke:</strong> višegodišnja</li>
+                            <li> <strong> Izdržljivost:</strong> prezimljava u kući</li>
+                            <li> <strong> Mesto sadnje:</strong> saksija, žardinjera</li>
+                        </ul>
+                        <div class="karakteristike-ikone">
+                            <div>
+                                <img src="../img/visina.svg" alt="visina biljke">
+                                <div>do 60 cm</div>
+                            </div>
+                            <div>
+                                <img src="../img/sirina.svg" alt="rastojanje između biljaka">
+                                <div>30-40 cm</div>
+                            </div>
+                            <div>
+                                <img src="../img/sunce.svg" alt="sunce">
+                                <div>sunce</div>
+                            </div>
+                            <div>
+                                <img src="../img/senka.svg" alt="polusenka">
+                                <div>polusenka</div>
+                            </div>
+                        </div>
+                        <div class="kalendar">
+                            Vreme sadnje:
+                            <table>
+                                <tr>
+                                    <td>JAN</td> <td>FEB</td> <td>MAR</td>
+                                    <td class="sadnja">APR</td> <td class="sadnja">MAJ</td> <td class="sadnja">JUN</td>
+                                </tr>
+                                <tr>
+                                    <td class="sadnja">JUL</td> <td>AVG</td> <td>SEP</td>
+                                    <td>OKT</td> <td>NOV</td> <td>DEC</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div> 
+                </div>
+
+                <!-- loptasta hrizantema -->
+                <div id="loptasta-hrizantema" class="proizvod">
+                    <div class="kontejner-slika hrizantema-loptasta">
+                        <div class="kruzici">
+                            <div class="krug" data-broj-slike="1"></div>
+                            <div class="krug" data-broj-slike="2"></div>
+                            <div class="krug" data-broj-slike="3"></div>
+                            <div class="krug" data-broj-slike="4"></div>
+                            <div class="krug" data-broj-slike="5"></div>
+                        </div>
+                    </div>
+                    <h3>Loptasta hrizantema</h3>
+                    <div class="prikazi-opis">Detaljnije <button class="plus"><i class="fa-solid fa-plus"></i></button></div>
+                    <div class="opis-proizvoda">
+                        <p>Hrizanteme - jesenje ili zimske ruže, svojom lepotom ukrašavaju bašte do kasne jeseni. Ima ih sa krupnim i sitnim cvetovima, različitih boja. Višegodišnje su, tokom godine imate lepo oblikovan zeleni žbunić, koji pokazuje svoju punu lepotu, kada svo ostalo cveće tone u zimski san i prestaje da cveta.</p>
+                        <ul class="karakteristike">
+                            <li> <strong> Kategorija:</strong> cveće</li>
+                            <li> <strong> Životni vek biljke:</strong> višegodišnja</li>
+                            <li> <strong> Izdržljivost:</strong> prezimljava na otovrenom</li>
+                            <li> <strong> Mesto sadnje:</strong> saksija, bašta</li>
+                        </ul>
+                        <div class="karakteristike-ikone">
+                            <div>
+                                <img src="../img/visina.svg" alt="visina biljke">
+                                <div>do 100 cm</div>
+                            </div>
+                            <div>
+                                <img src="../img/sirina.svg" alt="rastojanje između biljaka">
+                                <div>40-50 cm</div>
+                            </div>
+                            <div>
+                                <img src="../img/sunce.svg" alt="sunce">
+                                <div>sunce</div>
+                            </div>
+                            <div>
+                                <img src="../img/senka.svg" alt="polusenka">
+                                <div>polusenka</div>
+                            </div>
+                        </div>
+                        <div class="kalendar">
+                            Vreme sadnje:
+                            <table>
+                                <tr>
+                                    <td>JAN</td> <td>FEB</td> <td>MAR</td>
+                                    <td>APR</td> <td>MAJ</td> <td>JUN</td>
+                                </tr>
+                                <tr>
+                                    <td>JUL</td> <td>AVG</td> <td class="sadnja">SEP</td>
+                                    <td class="sadnja">OKT</td> <td class="sadnja">NOV</td> <td>DEC</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div> 
+                </div>
+
+                <!-- ciklama -->
+                <div id="ciklama" class="proizvod">
+                    <div class="kontejner-slika ciklama">
+                        <div class="kruzici">
+                            <div class="krug" data-broj-slike="1"></div>
+                            <div class="krug" data-broj-slike="2"></div>
+                            <div class="krug" data-broj-slike="3"></div>
+                        </div>
+                    </div>
+                    <h3>Ciklama</h3>
+                    <div class="prikazi-opis">Detaljnije <button class="plus"><i class="fa-solid fa-plus"></i></button></div>
+                    <div class="opis-proizvoda">
+                        <p>Ciklma - sobna biljka koja svojim mirisnim cvetovima ulepšava Vaš dom tokom cele zime. Ciklami je potrebna svetlost, ali ne i jako sunce. Najbolje mesto je pored prozora, jer voli temperaturu do 18 stepeni. Zemlja u saksiji treba da je vlažna, ali ne mokra.
+                        </p>
+                        <ul class="karakteristike">
+                            <li> <strong> Kategorija:</strong> cveće</li>
+                            <li> <strong> Životni vek biljke:</strong> jednogodišnja</li>
+                            <li> <strong> Izdržljivost:</strong> prezimljava u kući</li>
+                            <li> <strong> Mesto sadnje:</strong> saksija, žardinjera</li>
+                        </ul>
+                        <div class="karakteristike-ikone">
+                            <div>
+                                <img src="../img/visina.svg" alt="visina biljke">
+                                <div>15-30 cm</div>
+                            </div>
+                            <div>
+                                <img src="../img/sirina.svg" alt="rastojanje između biljaka">
+                                <div>20-30 cm</div>
+                            </div>
+                            <div>
+                                <img src="../img/sunce.svg" alt="sunce">
+                                <div>sunce</div>
+                            </div>
+                            <div>
+                                <img src="../img/senka.svg" alt="polusenka">
+                                <div>polusenka</div>
+                            </div>
+                        </div>
+                        <div class="kalendar">
+                            Vreme sadnje:
+                            <table>
+                                <tr>
+                                    <td>JAN</td> <td>FEB</td> <td class="sadnja">MAR</td>
+                                    <td class="sadnja">APR</td> <td>MAJ</td> <td>JUN</td>
+                                </tr>
+                                <tr>
+                                    <td class="sadnja">JUL</td> <td class="sadnja">AVG</td> <td class="sadnja">SEP</td>
+                                    <td>OKT</td> <td>NOV</td> <td>DEC</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div> 
+                </div>
+
+                <!-- primula -->
+                <div id="primula-jagorčevina" class="proizvod">
+                    <div class="kontejner-slika primula">
+                        <div class="kruzici">
+                            <div class="krug" data-broj-slike="1"></div>
+                            <div class="krug" data-broj-slike="2"></div>
+                            <div class="krug" data-broj-slike="3"></div>
+                        </div>
+                    </div>
+                    <h3>Primula</h3>
+                    <div class="prikazi-opis">Detaljnije <button class="plus"><i class="fa-solid fa-plus"></i></button></div>
+                    <div class="opis-proizvoda">
+                        <p>Jagorčevina (Primula). Svojim veselim bojama osvežavaju vrt u proleće, posle tmurnog zimskog perioda. Poreklom je sa našeg kontinenta ali i iz  centralne Kine. Ime zapravo označava na latinskom cvet koji rano cveta.</p>
+                        <ul class="karakteristike">
+                            <li> <strong> Kategorija:</strong> cveće</li>
+                            <li> <strong> Životni vek biljke:</strong> višegodišnja</li>
+                            <li> <strong> Izdržljivost:</strong> prezimljava u kući</li>
+                            <li> <strong> Mesto sadnje:</strong> saksija, bašta</li>
+                        </ul>
+                        <div class="karakteristike-ikone">
+                            <div>
+                                <img src="../img/visina.svg" alt="visina biljke">
+                                <div>10-30 cm</div>
+                            </div>
+                            <div>
+                                <img src="../img/sirina.svg" alt="rastojanje između biljaka">
+                                <div>20-30 cm</div>
+                            </div>
+                            <div>
+                                <img src="../img/sunce.svg" alt="sunce">
+                                <div>sunce</div>
+                            </div>
+                            <div>
+                                <img src="../img/senka.svg" alt="polusenka">
+                                <div>polusenka</div>
+                            </div>
+                        </div>
+                        <div class="kalendar">
+                            Vreme sadnje:
+                            <table>
+                                <tr>
+                                    <td>JAN</td> <td class="sadnja">FEB</td> <td class="sadnja">MAR</td>
+                                    <td class="sadnja">APR</td> <td class="sadnja">MAJ</td> <td>JUN</td>
+                                </tr>
+                                <tr>
+                                    <td>JUL</td> <td>AVG</td> <td>SEP</td>
+                                    <td>OKT</td> <td>NOV</td> <td>DEC</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div> 
+                </div>
+
+                <!-- sanpatiens -->
+                <div id="sanpatiens-sunpatiens" class="proizvod">
+                    <div class="kontejner-slika sanpatiens">
+                        <div class="kruzici">
+                            <div class="krug" data-broj-slike="1"></div>
+                            <div class="krug" data-broj-slike="2"></div>
+                            <!-- <div class="krug" data-broj-slike="3"></div> -->
+                        </div>
+                    </div>
+                    <h3>Sanpatiens</h3>
+                    <div class="prikazi-opis">Detaljnije <button class="plus"><i class="fa-solid fa-plus"></i></button></div>
+                    <div class="opis-proizvoda">
+                        <p>Sanpatiens (eng. SunPatiens) je veoma tražena vrsta koja sve više privlači pažnju. Veoma je laka za uzgajanje, tolerantna na toplotu i sušu, voli vodu ali ne i puno hrane. Cveta celo leto. Postoje tri vrste: niskog,srednjeg ili visokog rasta.</p>
+                        <ul class="karakteristike">
+                            <li> <strong> Kategorija:</strong> cveće</li>
+                            <li> <strong> Životni vek biljke:</strong> višegodišnja</li>
+                            <li> <strong> Izdržljivost:</strong> prezimljava u kući</li>
+                            <li> <strong> Mesto sadnje:</strong> saksija, bašta</li>
+                        </ul>
+                        <div class="karakteristike-ikone">
+                            <div>
+                                <img src="../img/visina.svg" alt="visina biljke">
+                                <div>50-70 cm</div>
+                            </div>
+                            <div>
+                                <img src="../img/sirina.svg" alt="rastojanje između biljaka">
+                                <div>40-50 cm</div>
+                            </div>
+                            <div>
+                                <img src="../img/sunce.svg" alt="sunce">
+                                <div>sunce</div>
+                            </div>
+                            <div>
+                                <img src="../img/senka.svg" alt="polusenka">
+                                <div>polusenka</div>
+                            </div>
+                        </div>
+                        <div class="kalendar">
+                            Vreme sadnje:
+                            <table>
+                                <tr>
+                                    <td>JAN</td> <td>FEB</td> <td>MAR</td>
+                                    <td class="sadnja">APR</td> <td class="sadnja">MAJ</td> <td class="sadnja">JUN</td>
+                                </tr>
+                                <tr>
+                                    <td class="sadnja">JUL</td> <td>AVG</td> <td>SEP</td>
+                                    <td>OKT</td> <td>NOV</td> <td>DEC</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div> 
+                </div>
+
             </div> <!--kraj svih proizvoda-->
         </div>
+
+        <article class="omotac nema-prizvoda">
+            <h3>Nažalost, trenutno nemamo traženi proizvod!😞</h3>
+            <p>Ipak, naš asortiman proizvoda se stalno obogaćuje. Nove biljke se dodaju često. Stoga, slobodno nas kontaktirajte u vezi traženog cveća. Pozovite nas, pošaljite e-mail ili nas pronađite na društvenim mrežama.</p>
+        </article>
     </section>
     <footer>
         <div class="omotac">

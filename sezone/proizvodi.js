@@ -12,6 +12,41 @@ meniDugme.addEventListener('click', () => {
     meniDugme.classList.toggle('active');
 });
 
+// pretraga proizvoda
+const lupa = document.querySelector('#lupa');
+const inputPretraga = document.querySelector('.input-pretraga');
+const proizvodi = document.querySelectorAll('.proizvod');
+const nemaProizvoda = document.querySelector('.nema-prizvoda');
+
+lupa.addEventListener('click', () =>{ inputPretraga.classList.toggle('aktivna') });
+inputPretraga.addEventListener('blur', () =>{ inputPretraga.classList.toggle('aktivna') });
+
+
+function nijePronadjeno (){
+    let nizProizvoda = [];
+    const none = (nijedan) => nijedan === 'none';
+    proizvodi.forEach(pro =>{
+        nizProizvoda.push(getComputedStyle(pro).display);
+    });
+    
+    if( nizProizvoda.every(none)){
+        nemaProizvoda.classList.add('prikazan');
+    } else {
+        nemaProizvoda.classList.remove('prikazan');
+    }
+}
+
+inputPretraga.addEventListener('input', (e) =>{
+    proizvodi.forEach( proizvod => { 
+        if (proizvod.id.toLowerCase().includes( e.target.value.toLowerCase())){
+            proizvod.style.display = 'block';
+        } else {
+            proizvod.style.display = 'none';
+        }
+    })
+    nijePronadjeno();
+})
+
 // kartica proizvoda
 const krugovi = document.querySelectorAll('.krug');
 
